@@ -1,0 +1,67 @@
+5
+20 2
+0: LOAD @ 20
+1: SUB @ 21
+2: JNEG . 5
+3: STORE . 30  // Ta linia powinna być pominięta (skok w JNEG)
+4: JUMP . 99   // Ta linia też (skok w JNEG)
+5: STORE . 30  // AC jest -10, zapisuje -10 do komórki 30
+6: ADD @ 22
+7: JZERO . 10
+8: STORE . 31  // Ta linia powinna być pominięta (skok w JZERO)
+9: JUMP . 99   // Ta linia też (skok w JZERO)
+10: LOAD . 100
+11: JUMP . 13
+12: STORE . 31  // Ta linia pominięta (skok w JUMP)
+13: STORE . 31  // AC jest 100, zapisuje 100 do komórki 31
+14: STOP . 0
+20: 10
+21: 20
+22: 10
+30: 0 
+31: 0 
+30 31
+16 6
+0: LOAD . 13
+1: AND . 7
+2: STORE . 30   // AC = 13 & 7 = 5
+3: OR . 10
+4: STORE . 31   // AC = 5 | 10 = 15
+5: XOR . 3
+6: STORE . 32   // AC = 15 ^ 3 = 12
+7: NOT . 0
+8: STORE . 33   // AC = ~12 = -13
+9: LOAD . 100
+10: SHL . 3
+11: STORE . 34  // AC = 100 << 3 = 800
+12: SHR . 2
+13: NULL . 0    // Instrukcja NULL, nic nie robi
+14: STORE . 35  // AC = 800 >> 2 = 200
+15: STOP . 0
+30 31 32 33 34 35
+10 2
+0: LOAD @ 10
+1: ADD + 11    // Adresowanie indeksowe: AC = 100 + MEM[AC+11] = 100 + MEM[111] = 100 + 5
+2: STORE . 20  // Zapisz AC = 105
+3: LOAD * 12   // Adresowanie pośrednie: AC = MEM[MEM[12]] = MEM[13] = 999
+4: STORE . 21  // Zapisz AC = 999
+5: STOP . 0
+10: 100
+12: 13
+13: 999
+111: 5
+20 21
+8 2
+0: LOAD @ 10    // Test ładowania liczby ujemnej z pamięci, AC = -50
+1: ADD @ 11     // AC = -50 + 20 = -30
+2: STORE . 20   // Zapisz -30
+3: LOAD . -10   // Adresowanie bezpośrednie wartości ujemnej, AC = -10
+4: STORE . 21   // Zapisz -10
+5: STOP . 0
+10: -50
+11: 20
+20 21
+2 1
+0: JUMP . 0     // Pętla nieskończona
+1: STOP . 0
+100

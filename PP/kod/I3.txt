@@ -1,0 +1,22 @@
+20
+0: LOAD @ 50
+1: LOAD + 50 
+2: AND . 7
+3: JZERO . 10
+4: LOAD @ 50
+5: SUB . 1
+6: JZERO . 9
+7: STORE . 50
+8: JUMP . 0
+9: STOP . 0
+10: LOAD @ 50
+11: LOAD + 50 
+12: SUB @ 49
+13: JNEG . 4
+14: ADD @ 49
+15: STORE . 49
+16: LOAD @ 50
+17: ADD . 50
+18: STORE . 48
+19: JUMP . 4
+

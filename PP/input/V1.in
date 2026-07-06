@@ -1,0 +1,24 @@
+1
+22
+ADD Karol 7
+ADD Darek 3
+ADD Alojzy 7
+PRINT_DESC
+ADD Rafal 5
+ADD Darek 3
+ADD Rafal 5
+ADD Rafal -7
+FIND Rafal
+DISQ Alojzy
+PRINT
+ADD Alojzy 2
+ADD Darek 13
+ADD Marcin 7
+DISQ Rafal
+FIND Rafal
+CHANGE Rafal Czesiek
+CHANGE Alojzy Darek
+CHANGE Karol Czesiek
+PRINT
+CLEAN
+PRINT_DESC

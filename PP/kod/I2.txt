@@ -1,0 +1,11 @@
+10
+0: LOAD @ 50
+1: LOAD + 50
+2: XOR @ 49
+3: STORE . 49
+4: LOAD @ 50
+5: SUB . 1
+6: JZERO . 9
+7: STORE . 50
+8: JUMP . 0
+9: STOP . 0

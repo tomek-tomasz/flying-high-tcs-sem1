@@ -1,0 +1,44 @@
+4
+9 2
+0: LOAD @ 20
+1: SUB @ 21
+2: STORE . 22
+3: ADD @ 21
+4: ADD @ 21
+5: STORE . 23 //zapis wyniku
+6: STOP . 0
+20: 100
+21: 50
+22 23
+7 1
+0: LOAD @ 20
+1: SUB @ 21
+3: JZERO . 5 //test
+4: STORE . 22
+5: STOP . 0
+20: 100
+21: 200
+22
+9 2
+0: LOAD @ 12
+1: SUB * 10 //adresowanie pośrednie
+2: STORE @ 13
+3: STORE . 13
+4: STOP . 0
+10: 11
+11: 12
+12: 13
+13: 14
+13 14
+9 3
+0: LOAD . 1
+1: LOAD + 12
+2: SUB @ 10
+3: STORE . 13
+4: STOP . 0
+10: 11
+11: 12
+12: 13
+13: 14
+0 4 13
+
